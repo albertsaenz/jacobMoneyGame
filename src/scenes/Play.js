@@ -90,7 +90,7 @@ class Play extends Phaser.Scene {
         /*evento de teclado barra espaciadora que inicia el juego*/
         
             timecreateCovid = this.time.addEvent({
-                delay: 500,
+                delay: 550,
                 callback: this.covide,
                 callbackScope: this,
                 // repeat:2
