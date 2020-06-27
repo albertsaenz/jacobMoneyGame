@@ -117,9 +117,9 @@ class Play extends Phaser.Scene {
         this.joyStick = this.plugins.get('rexvirtualjoystickplugin').add(this, {
             x: this.sys.game.config.width/1.2,
             y: this.sys.game.config.height-60,
-            radius: 33,
-            base: this.add.circle(0, 0, 33, 0x888888,0.4),
-            thumb: this.add.circle(0, 0, 17, 0xcccccc,0.5),
+            radius: 43,
+            base: this.add.circle(0, 0, 43, 0x888888,0.4),
+            thumb: this.add.circle(0, 0, 27, 0xcccccc,0.5),
             // dir: '8dir',   // 'up&down'|0|'left&right'|1|'4dir'|2|'8dir'|3
             // forceMin: 16,
             // enable: true
