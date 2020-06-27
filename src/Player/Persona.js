@@ -55,7 +55,7 @@ doStopR(){
 }
     update() {
         if (this.moveLeft && !this.moveRight) {
-            this.body.setVelocityX(-180);
+            this.body.setVelocityX(-250);
             this.flipX = true;
             this.body.setSize(15, 28);
             this.body.setOffset(10, 4);
@@ -64,7 +64,7 @@ doStopR(){
                 this.anims.play("persona_walk");
             }
         } else if (this.moveRight && !this.moveLeft) {
-            this.body.setVelocityX(180);
+            this.body.setVelocityX(250);
             this.flipX = false;
             this.body.setSize(15, 28);
             this.body.setOffset(7, 4);
