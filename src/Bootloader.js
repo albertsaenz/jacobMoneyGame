@@ -4,8 +4,8 @@ class Bootloader extends Phaser.Scene {
     }
 
     preload() {
-        this.load.path = "./assets/";
         this.load.plugin('rexvirtualjoystickplugin', 'https://raw.githubusercontent.com/rexrainbow/phaser3-rex-notes/master/dist/rexvirtualjoystickplugin.min.js', true);
+        this.load.path = "./assets/";
         this.load.image([
             'fondo',
             'plataforma',

@@ -6,6 +6,9 @@ const config = {
     title: "CVGame",
     version: "1.0.0",
     type: Phaser.AUTO,
+    input :{
+		activePointers:3,
+	  },
     scale: {
         parent: "phaser_container",
         width: 360,

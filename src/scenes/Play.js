@@ -86,7 +86,7 @@ class Play extends Phaser.Scene {
             // this.covidGroup.addCovid();
             // this.covidGroup.addCovid();
         });
-        this.cursor = this.input.keyboard.createCursorKeys();
+        // this.cursor = this.input.keyboard.createCursorKeys();
         /*evento de teclado barra espaciadora que inicia el juego*/
         
             timecreateCovid = this.time.addEvent({
