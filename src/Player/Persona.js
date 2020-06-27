@@ -26,10 +26,36 @@ class Persona extends Phaser.GameObjects.Sprite {
     plataforma() {
         this.jumping = false;
     }
+    saltar(){
+        this.salta = true;
+     }
+     saltarStop(){
+        this.salta = false;
+     }
 
+plataforma() {
+    this.jumping = false;
+}
+doGoLeft()
+{
+this.moveLeft = true;
+}
+doStop(){
+    this.moveLeft = false;
+    
+}
+doStopR(){
+    this.moveRight = false;
+    
+}
+
+ doGoRight()
+{
+    this.moveRight=true;
+}
     update() {
-        if (this.cursor.left.isDown) {
-            this.body.setVelocityX(-250);
+        if (this.moveLeft && !this.moveRight) {
+            this.body.setVelocityX(-180);
             this.flipX = true;
             this.body.setSize(15, 28);
             this.body.setOffset(10, 4);
@@ -37,8 +63,8 @@ class Persona extends Phaser.GameObjects.Sprite {
                 this.prevMov = "left";
                 this.anims.play("persona_walk");
             }
-        } else if (this.cursor.right.isDown) {
-            this.body.setVelocityX(250);
+        } else if (this.moveRight && !this.moveLeft) {
+            this.body.setVelocityX(180);
             this.flipX = false;
             this.body.setSize(15, 28);
             this.body.setOffset(7, 4);
@@ -55,7 +81,7 @@ class Persona extends Phaser.GameObjects.Sprite {
         }
 
         if (
-            Phaser.Input.Keyboard.JustDown(this.cursor.up) &&
+            this.salta &&
             !this.jumping &&
             this.body.blocked.down
         ) {

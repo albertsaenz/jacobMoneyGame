@@ -114,6 +114,17 @@ class Play extends Phaser.Scene {
         });
         
         this.physics.world.setBoundsCollision(true, true, false, true);
+        this.joyStick = this.plugins.get('rexvirtualjoystickplugin').add(this, {
+            x: 52,
+            y: this.sys.game.config.height-60,
+            radius: 53,
+            base: this.add.circle(0, 0, 53, 0x888888,0.4),
+            thumb: this.add.circle(0, 0, 37, 0xcccccc,0.5),
+            // dir: '8dir',   // 'up&down'|0|'left&right'|1|'4dir'|2|'8dir'|3
+            // forceMin: 16,
+            // enable: true
+        });
+         this.cursorKeys = this.joyStick.createCursorKeys();
     }
 covide(){
     this.covidGroup.addCovid();
@@ -122,6 +133,19 @@ covide(){
         this.persona.update();
         // this.covidGroup.update();
         // timecreateCovid.paused=false;
+        if(this.cursorKeys.right.isDown){
+            this.persona.doGoRight();
+
+        }else{
+            this.persona.doStopR();
+        }
+
+        if(this.cursorKeys.left.isDown){
+               this.persona.doGoLeft();
+
+            }else{
+               this.persona.doStop();
+        } 
     }
 }
 export default Play;
