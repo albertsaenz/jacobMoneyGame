@@ -115,7 +115,7 @@ class Play extends Phaser.Scene {
         
         this.physics.world.setBoundsCollision(true, true, false, true);
         this.joyStick = this.plugins.get('rexvirtualjoystickplugin').add(this, {
-            x: 52,
+            x: this.sys.game.config.width/2,
             y: this.sys.game.config.height-60,
             radius: 53,
             base: this.add.circle(0, 0, 53, 0x888888,0.4),
