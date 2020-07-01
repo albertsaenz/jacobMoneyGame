@@ -29,9 +29,9 @@ const config = {
     },
     scene: [
         Bootloader,
+        Menu,
         UI,
         Play,
-        Menu
     ]
 };
 new Phaser.Game(config);

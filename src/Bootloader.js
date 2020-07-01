@@ -16,6 +16,9 @@ class Bootloader extends Phaser.Scene {
             'pildora',
             'play'
         ]);
+/**Fuente texto */
+this.load.image("font", "font/font.png");
+this.load.json("fontData", "font/font.json");
 
         /** Audio */
         this.load.audio('menu_clic', 'menu_clic.wav');
@@ -41,9 +44,7 @@ class Bootloader extends Phaser.Scene {
         this.load.atlas('persona', 'persona/jacobo.png', 'persona/persona_atlas.json');
         this.load.animation('persona_anim', 'persona/persona_anim.json');
 
-        /**Fuente texto */
-        this.load.image("font", "font/font.png");
-        this.load.json("fontData", "font/font.json");
+        
 
         /* loading bar */
         this.ProgressAssets();
