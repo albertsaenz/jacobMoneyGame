@@ -111,9 +111,9 @@ class Bootloader extends Phaser.Scene {
 			progressBar.fillRect(width/11, 260, 300 * value, 30);
 		});
 		
-		// this.load.on('fileprogress', function (file) {
-		// 	assetText.setText('Loading asset: ' + file.key);
-		// });
+		this.load.on('fileprogress', function (file) {
+			assetText.setText('Loading asset: ' + file.key);
+		});
     }
 }
 export default Bootloader;
