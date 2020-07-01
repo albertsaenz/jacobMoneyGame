@@ -21,9 +21,7 @@ class Bootloader extends Phaser.Scene {
         this.load.audio('menu_clic', 'menu_clic.wav');
         this.load.audio('hit', 'hit.mp3');
         this.load.audio('item_drop', 'item_drop.mp3');
-        this.load.audio('nou', 'nou.mp3');
         this.load.audio('no_me_toques', 'no_me_toques.mp3');
-        this.load.audio('back_s', 'back_s.mp3');
         this.load.audio('game_over', 'game_over.mp3');
         this.load.audio('back_sound', 'jdinero.mp3');
 
@@ -98,7 +96,7 @@ class Bootloader extends Phaser.Scene {
 			y: height / 2 + 50,
 			text: '',
 			style: {
-				font: '23px monospace',
+				font: '18px monospace',
 				fill: '#ffffff'
 			}
 		});
