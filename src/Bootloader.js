@@ -104,7 +104,7 @@ this.load.json("fontData", "font/font.json");
 		assetText.setOrigin(0.5, 0.5);
 		
 		this.load.on('progress', function (value) {
-			percentText.setText(parseInt(value * 99) + '%');
+			percentText.setText(parseInt(value * 100) + '%');
 			progressBar.clear();
 			progressBar.fillStyle(0xffffff, 1);
 			progressBar.fillRect(width/11, 260, 300 * value, 30);
